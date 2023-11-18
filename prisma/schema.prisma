@@ -6,3 +6,9 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Payment {
+  id     String @id @default(uuid())
+  amount Int
+  email  String
+}
