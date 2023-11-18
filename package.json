@@ -6,14 +6,9 @@
   "author": "Programming Hero",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec  ./src/server.ts",
+    "dev": "ts-node-dev --respawn --transpile-only ./src/server.ts",
     "build": "tsc",
     "start": "node ./dist/server.js",
-    "lint:check": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "prettier:check": "prettier --check .",
-    "prettier:fix": "prettier --write .",
-    "lint-prettier": "yarn lint:check && yarn prettier:check",
     "husky-install": "husky install",
     "husky-prepare-pre-commit": "husky add .husky/pre-commit 'yarn lint-staged'",
     "prisma:migrate": "npx prisma migrate dev ",
@@ -55,6 +50,7 @@
     "prettier": "^2.8.8",
     "prisma": "^4.15.0",
     "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.0.4"
   }
 }

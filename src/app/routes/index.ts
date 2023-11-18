@@ -1,12 +1,13 @@
-import express from 'express';
+import express from "express";
+import { paymentRoutes } from "../modules/payment/payment.route";
 
 const router = express.Router();
 
 const moduleRoutes = [
   {
-    path: '',
-    routes: ""
-  }
+    path: "/payment",
+    routes: paymentRoutes,
+  },
 ];
 
 moduleRoutes.forEach((route) => {
